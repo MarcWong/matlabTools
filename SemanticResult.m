@@ -37,8 +37,8 @@ for i = 1:length(list)
     %colormap(gray)
     %axis image
     
-    imwrite(img,['/Users/marcWong/Desktop/output/' strrep(list(i).name,'.png','') '.jpg']);
-    imwrite(uint8(BW_sobel),['/Users/marcWong/Desktop/output_binary/' list(i).name]);
+    imwrite(img,['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/src/' strrep(list(i).name,'.png','') '.jpg']);
+    imwrite(255.*uint8(BW_canny),['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/gt/' list(i).name]);
     
     %pause(1/10);
 end
