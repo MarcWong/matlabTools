@@ -1,7 +1,8 @@
 %use these parameters when scaling
-theta_and_flip = '270.0_1_0/';
+theta_and_flip = '315.0_1_0/';
 srcpath = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt/' theta_and_flip];
-outputpath = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt_scale_1.5/' theta_and_flip];
+%outputpath = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt_scale_1.5/' theta_and_flip];
+outputpath2 = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt_scale_0.5/' theta_and_flip];
 
 %use these parameters when flipping
 %theta_str = '270.0';
@@ -23,8 +24,8 @@ for i = 1:length(list)
     %%  scale
     
     %imgout = imresize(img,[1920 1080]);
-    imgout = imresize(img,1.5); % parameter of scaling
-    
+    %imgout = imresize(img,1.5); % parameter of scaling
+    imgout2 = imresize(img,0.5);
    %%  flip
     
     %imgout = flip(img,1);
@@ -49,5 +50,6 @@ for i = 1:length(list)
     %pause(1/10000);
     
     %% output
-    imwrite(imgout,[outputpath list(i).name])
+    %imwrite(imgout,[outputpath list(i).name]);
+    imwrite(imgout2,[outputpath2 list(i).name]);
 end

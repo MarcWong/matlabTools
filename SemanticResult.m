@@ -23,15 +23,17 @@ for i = 1:length(list)
     %imwrite(BW_roberts,'/Users/marcWong/Desktop/roberts.jpg')
     %BW_laplace = edge(imggt,'log');
     %imwrite(BW_laplace,'/Users/marcWong/Desktop/laplace.jpg')
-    BW_canny = edge(imggt,'canny');
+    img = rgb2gray(img);
+    BW_canny = edge(img,'canny');
     %imwrite(BW_canny,'/Users/marcWong/Desktop/canny.jpg')
+    imshow(BW_canny);
     
     img(:,:,1) = img(:,:,1) + uint8(BW_canny)*255;
     img(:,:,2) = img(:,:,2) + uint8(BW_canny)*1;
     img(:,:,3) = img(:,:,3) + uint8(BW_canny)*1;
     
     %subplot(1,2,1);
-    %imshow(img);
+    imshow(img);
     %subplot(1,2,2);
     %imagesc(uint8(BW_sobel),[0 1]);
     %colormap(gray)
