@@ -4,15 +4,15 @@ function out =  expand(img_in,thres)
     end
     [m n] = size(img_in);
     out = zeros([m n]);
-
+    unvisit = true([m n]);
     for i = 2:m-1
         for j = 2:n-1
-            if img_in(i,j)>thres
+            if img_in(i,j)>thres && unvisit(i,j)
+                unvisit(i,j) = false;
                 out(i-1,j-1)=255;
                 out(i,j-1)=255;
                 out(i+1,j-1)=255;
                 out(i-1,j)=255;
-                out(i,j)=255;
                 out(i+1,j)=255;
                 out(i-1,j+1)=255;
                 out(i,j+1)=255;
@@ -20,4 +20,5 @@ function out =  expand(img_in,thres)
             end
         end
     end
+    out = uint8(out);
 end
