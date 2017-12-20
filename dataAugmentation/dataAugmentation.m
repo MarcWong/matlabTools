@@ -1,8 +1,14 @@
-%use these parameters when scaling
-theta_and_flip = '315.0_1_0/';
-srcpath = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt/' theta_and_flip];
+%use these parameters when random crop
+srcpath = ['/Users/marcWong/Desktop/' theta_and_flip];
 %outputpath = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt_scale_1.5/' theta_and_flip];
 outputpath2 = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt_scale_0.5/' theta_and_flip];
+
+
+%use these parameters when scaling
+theta_and_flip = '315.0_1_0/';
+%srcpath = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt/' theta_and_flip];
+%outputpath = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt_scale_1.5/' theta_and_flip];
+%outputpath2 = ['/Users/marcWong/Desktop/lab/ningbo3539_edge_gt/train/aug_gt_scale_0.5/' theta_and_flip];
 
 %use these parameters when flipping
 %theta_str = '270.0';
