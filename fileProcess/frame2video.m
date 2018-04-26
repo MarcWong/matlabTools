@@ -18,7 +18,7 @@ function frame2video(varargin)
     endFrame = length(list); %?????  
       
     if(exist('videoName','file'))  
-        delete videoName.avi  
+        delete videoName.avi
     end  
     
     %?????????  
